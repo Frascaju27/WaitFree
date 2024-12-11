@@ -1,0 +1,284 @@
+/* --- Global Variables --- */
+:root {
+    --primary-color: #003366; /* Strong navy blue */
+    --accent-color: #FFD700; /* Gold */
+    --background-color: #fffcfc; /* Light gray */
+    --text-color-light: #FFFFFF;
+    --text-color-dark: #333333;
+    --font-family: 'Arial', sans-serif;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 2.5rem;
+    --spacing-unit: 1rem;
+}
+
+.container{
+    width: 100% !important;
+}
+.login-page {
+    background-image: url('../images/healthcare.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/* --- Reset and Global Styles --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color) !important;
+    font-family: var(--font-family);
+    color: var(--text-color-dark);
+}
+
+/* --- Navbar Customizations --- */
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.navbar .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color-light);
+}
+.navbar .navbar-brand:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--text-color-light);
+}
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+}
+
+.navbar .navbar-toggler {
+    border-color: var(--accent-color);
+}
+.navbar .navbar-toggler-icon {
+    background-color: var(--accent-color);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    color: var(--text-color-light) !important;
+}
+.btn-warning {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color-dark);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.btn-warning:hover {
+    background-color: #ffcc00;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 5rem 2rem;
+    height: 60vh;
+}
+.hero h2 {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    margin-bottom: var(--spacing-unit);
+}
+.hero p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-unit * 2);
+}
+
+/* --- Features Section --- */
+.features {
+    background-color: var(--background-color);
+    padding: 3rem 0;
+    text-align: center;
+}
+.features h2 {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    margin-bottom: var(--spacing-unit * 3);
+}
+.card {
+    border: none;
+    border-radius: 0px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card-body {
+    padding: var(--spacing-unit * 2);
+    border-radius: 0 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header{
+    border-radius: 0 !important;
+
+}
+
+.d-flex{
+    text-align: center;
+}
+
+.row>*{
+    margin-top: 10px !important;
+}
+
+/* --- Patient Info Form --- */
+.form-container {
+    background-color: #FFFFFF;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.form-label {
+    font-weight: bold;
+}
+.form-control {
+    border-radius: 0;
+}
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* --- Contact Section --- */
+.contact {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 3rem 0;
+    text-align: center;
+}
+.contact h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-unit * 2);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--text-color-dark);
+    color: var(--text-color-light);
+    padding: var(--spacing-unit * 2) 0;
+    text-align: center;
+}
+footer p {
+    font-size: var(--font-size-base);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .hero {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .features h2 {
+        font-size: 1.75rem;
+    }
+}
+@media (max-width: 576px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    .features h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Override Bootstrap's bg-primary and other classes */
+.bg-primary {
+    background-color: #003366 !important;
+}
+
+.text-primary {
+    color: #003366 !important;
+}
+
+.btn-primary {
+    background-color: #003366 !important;
+    border-color: #003366 !important;
+}
+
+.btn-primary:hover {
+    background-color: #00264d !important;
+    border-color: #00264d !important;
+}
+
+.bg-secondary {
+    background-color: #FFD700 !important;
+}
+
+.text-secondary {
+    color: #FFD700 !important;
+}
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.text-light {
+    color: #f8f9fa !important;
+}
+
+.text-dark {
+    color: #343a40 !important;
+}
+
+/* Styling for the disabled card */
+.card-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    background-color: #f8f9fa;
+    border-color: #e2e6ea;
+}
+
+.form-check-input {
+    width: 60px;
+    height: 34px;
+}
+
+.form-check-label {
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
+.nav-link.dropdown-toggle::after {
+    content: none;
+}
